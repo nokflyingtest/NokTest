@@ -10,6 +10,9 @@ export const LoginPage = lazy(() => import('src/pages/login'));
 export const ProductsPage = lazy(() => import('src/pages/products'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
+export const TestCarousel = lazy(() => import('src/pages/TestCarousel'));
+export const TestTOTP = lazy(() => import('src/pages/TestTOTP'));
+
 // ----------------------------------------------------------------------
 
 export default function Router() {
@@ -36,6 +39,14 @@ export default function Router() {
     {
       path: '404',
       element: <Page404 />,
+    },
+    {
+      path: 'TestCarousel',
+      element: <TestCarousel />,
+    },
+    {
+      path: 'TestTOTP',
+      element: <TestTOTP />,
     },
     {
       path: '*',
