@@ -18,7 +18,9 @@ import { Box, Card, Stack, Button, Divider, TextField, Typography } from '@mui/m
 export default function TestTOTP() {
 
   const [authenticator, setAuthenticator] = useState();
-  const [secret, setSecret] = useState('MAXRCCKIEVVVAS3S');
+  // const [secret, setSecret] = useState('MAXRCCKIEVVVAS3S');
+  const [secret, setSecret] = useState('75KRKBUAEFF2LAAM');
+  
   const [imageQRCode, setImageQRCode] = useState();
   const [verifyToken, setVerifyToken] = useState();
   const [imageUpload, setImageUpload] = useState();
@@ -32,7 +34,7 @@ export default function TestTOTP() {
       reader.onload = () => {
         const aBuffer = reader.result;
 
-        // console.log(aBuffer);
+        console.log(aBuffer);
         // console.log(file);
 
         const blob = new Blob([aBuffer], { type: file.type });
